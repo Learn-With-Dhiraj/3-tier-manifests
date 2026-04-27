@@ -25,3 +25,28 @@ spec:
             secretKeyRef:
               name: app-secrets
               key: mongodb-url
+        - name: MAPBOX_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: mapbox-token
+        - name: SECRET
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: secret
+        - name: CLOUDINARY_CLOUD_NAME
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: cloudinary-name
+        - name: CLOUDINARY_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: cloudinary-key
+        - name: CLOUDINARY_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: cloudinary-secret
