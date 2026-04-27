@@ -12,7 +12,7 @@ service:
   targetPort: 3000
 
 ingress:
-  host: qa.yourdomain.com
+  host: qa.dhirajdevops.ddns.net
 
 env:
   mongodbUrl: "YOUR_MONGODB_URL"
