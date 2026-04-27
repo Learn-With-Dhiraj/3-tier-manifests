@@ -1,0 +1,23 @@
+namespace: dev
+replicaCount: 1
+
+image:
+  repository: 040235853848.dkr.ecr.ap-south-1.amazonaws.com/devops-app
+  tag: 17
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  host: dhirajdevops.ddns.net
+
+env:
+  mongodbUrl: "YOUR_MONGODB_URL"
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 2
+  cpuUtilization: 70
