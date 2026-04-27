@@ -21,4 +21,7 @@ spec:
         - containerPort: {{ .Values.service.targetPort }}
         env:
         - name: DB_URL
-          value: {{ .Values.env.mongodbUrl | quote }}
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: mongodb-url
