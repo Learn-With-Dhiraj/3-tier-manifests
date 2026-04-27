@@ -1,0 +1,23 @@
+namespace: qa
+replicaCount: 2
+
+image:
+  repository: 040235853848.dkr.ecr.ap-south-1.amazonaws.com/devops-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  host: qa.yourdomain.com
+
+env:
+  mongodbUrl: "YOUR_MONGODB_URL"
+
+hpa:
+  minReplicas: 2
+  maxReplicas: 4
+  cpuUtilization: 70
