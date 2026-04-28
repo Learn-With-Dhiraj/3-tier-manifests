@@ -3,7 +3,7 @@ replicaCount: 1
 
 image:
   repository: 040235853848.dkr.ecr.ap-south-1.amazonaws.com/devops-app
-  tag: 27
+  tag: 28
   pullPolicy: Always
 
 service:
