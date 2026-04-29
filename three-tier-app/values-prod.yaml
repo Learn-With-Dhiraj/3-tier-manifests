@@ -1,9 +1,9 @@
 namespace: prod
-replicaCount: 3
+replicaCount: 2
 
 image:
   repository: 040235853848.dkr.ecr.ap-south-1.amazonaws.com/devops-app
-  tag: latest
+  tag: prod-latest
   pullPolicy: Always
 
 service:
@@ -12,12 +12,12 @@ service:
   targetPort: 3000
 
 ingress:
-  host: dhirajdevops.ddns.net
+  host: goodcampprod.ddns.net
 
 env:
-  mongodbUrl: "YOUR_MONGODB_URL"
+  mongodbUrl: ""
 
 hpa:
-  minReplicas: 3
-  maxReplicas: 10
+  minReplicas: 2
+  maxReplicas: 6
   cpuUtilization: 70
